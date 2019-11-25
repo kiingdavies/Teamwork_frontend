@@ -13,37 +13,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import withStyles from "@material-ui/core/styles/withStyles";
 import styles from "../util/theme";
 
-// const styles = {
-//     form: {
-//         textAlign: "center"
-//       },
-//       image: {
-//         margin: "20px auto 20px auto"
-//       },
-//       pageTitle: {
-//         margin: "10px auto 10px auto"
-//       },
-//       textField: {
-//         margin: "10px auto 10px auto"
-//       },
-//       button: {
-//         marginTop: 20,
-//         position: "relative"
-//       },
-//       customError: {
-//         color: "red",
-//         fontSize: "0.8rem",
-//         marginTop: "10px"
-//       },
-//       progress: {
-//           position: "absolute"
-//       }
-// }
-
-// const styles = (theme) => ({
-//   ...theme
-// })
-
 class signup extends Component {
   constructor() {
     super();
@@ -103,6 +72,30 @@ class signup extends Component {
             Signup
           </Typography>
           <form noValidate onSubmit={this.handleSubmit}>
+          <TextField
+              id="firstname"
+              name="firstname"
+              type="text"
+              label="First Name"
+              className={classes.textField}
+              helperText={errors.handle}
+              error={errors.handle ? true : false}
+              value={this.state.handle}
+              onChange={this.handleChange}
+              fullWidth
+            />
+            <TextField
+              id="lastname"
+              name="lastname"
+              type="text"
+              label="Last Name"
+              className={classes.textField}
+              helperText={errors.handle}
+              error={errors.handle ? true : false}
+              value={this.state.handle}
+              onChange={this.handleChange}
+              fullWidth
+            />
             <TextField
               id="email"
               name="email"
@@ -140,10 +133,46 @@ class signup extends Component {
               fullWidth
             />
             <TextField
-              id="handle"
-              name="handle"
+              id="gender"
+              name="gender"
               type="text"
-              label="Handle"
+              label="Gender"
+              className={classes.textField}
+              helperText={errors.handle}
+              error={errors.handle ? true : false}
+              value={this.state.handle}
+              onChange={this.handleChange}
+              fullWidth
+            />
+            <TextField
+              id="jobrole"
+              name="jobrole"
+              type="text"
+              label="Job Role"
+              className={classes.textField}
+              helperText={errors.handle}
+              error={errors.handle ? true : false}
+              value={this.state.handle}
+              onChange={this.handleChange}
+              fullWidth
+            />
+            <TextField
+              id="department"
+              name="department"
+              type="text"
+              label="Department"
+              className={classes.textField}
+              helperText={errors.handle}
+              error={errors.handle ? true : false}
+              value={this.state.handle}
+              onChange={this.handleChange}
+              fullWidth
+            />
+            <TextField
+              id="address"
+              name="address"
+              type="text"
+              label="Address"
               className={classes.textField}
               helperText={errors.handle}
               error={errors.handle ? true : false}
